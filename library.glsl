@@ -102,6 +102,82 @@ vec3 perlin3(vec2 st) {
 
 
 
+float shiftPoint(float from, float to, float val){
+    if(val < from){
+        return (val / from) * to;
+    } else {
+        return to + (val - from) /(1.0 -from) * (1.0 - to);
+    }
+}
+
+
+float sinc( float x, float k ){
+    float a = PI * (k*x-1.0);
+    return sin(a) / a;
+}
+
+float expImpulse( float x, float k ){
+    float h = k*x;
+    return h*exp(1.0-h);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
