@@ -141,9 +141,10 @@ vec2 glitch(vec2 st){
 }
 
 void main (void) {
+
     vec2 st = gl_FragCoord.xy/u_resolution.xy;
     float aspect = u_resolution.x/u_resolution.y;
-    st.x *= aspect;
+    // st.x *= aspect;
     st = glitch(st);
 
     vec3 cBars = plotBars(st);
