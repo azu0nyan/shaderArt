@@ -11,8 +11,8 @@ uniform float u_time;
 
 float heightAt(vec2 at){
     return perlin(at) + 
-    perlin(at * 2.4 + vec2(u_time)) * 0.3 +
-    perlin(at * 4.4 + vec2(u_time* -2.0)) * 0.1 +
+    perlin(at * 2.4) + vec2(u_time)) * 0.3 +
+    perlin(at * 4.4) + vec2(u_time* -2.0)) * 0.1 +
     -2.0;
 }
 #define EPS 0.1
